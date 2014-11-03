@@ -1,11 +1,14 @@
 package com.ikimuhendis.ldrawer.sample;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerTabStrip;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,14 +20,16 @@ import com.ikimuhendis.ldrawer.ActionBarDrawerToggle;
 import com.ikimuhendis.ldrawer.DrawerArrowDrawable;
 
 
-public class SampleActivity extends Activity {
+public class SampleActivity extends FragmentActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerArrowDrawable drawerArrow;
     private boolean drawerArrowColor;
-
+    ViewPager pager;
+    private String titles[] = new String[]{"Card1", "Card2", "Card3", "Card4"};
+    PagerTabStrip pagerTabStrip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +41,12 @@ public class SampleActivity extends Activity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.navdrawer);
 
-
+        pager = (ViewPager) findViewById(R.id.viewPager);
+        pagerTabStrip = (PagerTabStrip) findViewById(R.id.pagerTabStrip);
+        pagerTabStrip.setBackgroundColor(getResources().getColor(R.color.actionbar_color));
+        pagerTabStrip.setTextColor(Color.WHITE);
+        pagerTabStrip.setTabIndicatorColor(Color.WHITE);
+        pager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), titles));
         drawerArrow = new DrawerArrowDrawable(this) {
             @Override
             public boolean isLayoutRtl() {
