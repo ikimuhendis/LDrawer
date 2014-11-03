@@ -21,7 +21,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 return SampleFragment.newInstance(position);
             case 1:
                 return SampleFragment.newInstance(position);
-
+            case 2:
+                return SampleFragment.newInstance(position);
+            case 3:
+                return SampleFragment.newInstance(position);
         }
         return null;
     }
