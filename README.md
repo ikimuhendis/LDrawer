@@ -9,7 +9,7 @@ Note
 --------
 Basically same as appcompat_v7 version 21, you can use appcompat_v7
 ```groovy
-compile 'com.android.support:appcompat-v7:21.0.+'
+implementation 'com.android.support:appcompat-v7:21.0.+'
 ```
 ```xml
 <style name="AppTheme" parent="Theme.AppCompat.Light">
