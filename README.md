@@ -9,7 +9,7 @@ Note
 --------
 Basically same as appcompat_v7 version 21, you can use appcompat_v7
 ```groovy
-compile 'com.android.support:appcompat-v7:21.0.+'
+implementation 'com.android.support:appcompat-v7:21.0.+'
 ```
 ```xml
 <style name="AppTheme" parent="Theme.AppCompat.Light">
@@ -40,7 +40,7 @@ via Maven:
 ```
 or Gradle:
 ```groovy
-compile 'com.ikimuhendis:ldrawer:0.1'
+implementation 'com.ikimuhendis:ldrawer:0.1'
 ```
 
 ![alt tag](https://raw.githubusercontent.com/IkiMuhendis/LDrawer/master/images/animated.gif)
@@ -89,14 +89,14 @@ drawerArrow.setColor(R.color.ldrawer_color); // to set color
 ```
 ##Example Projects
 
-  
+
   [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.ikimuhendis.ldrawer.sample)
   [LDrawer][3]
-  
-  
+
+
   [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.ikimuhendis.android.foodjob)
   [Yemek Tarifleri][4]
-  
+
   [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=cz.kinst.jakub.asparagus)
   [Asparagus - My Recipes][5]
 
@@ -116,8 +116,8 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-    
-    
+
+
 [1]: https://github.com/IkiMuhendis/LDrawer
 [2]: http://developer.android.com/training/implementing-navigation/nav-drawer.html
 [3]: https://play.google.com/store/apps/details?id=com.ikimuhendis.ldrawer.sample
